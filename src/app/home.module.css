@@ -1,0 +1,511 @@
+.headBox {
+  position: relative;
+  width: 80%;
+  padding: 15px 10% 0 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background: rgb(235, 235, 235);
+}
+
+.topNav {
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.topNav .left {
+  display: flex;
+  gap: 1rem;
+}
+
+.topNav .logoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+}
+
+.topNav .logoBox h1 {
+  background: #322e7ff4;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  justify-content: center;
+  color: #F03835;
+}
+
+.topNav .left p {
+  font-size: 1.5rem;
+}
+
+.topNav .left article small {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.topNav .left article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.topNav .left article div {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.topNav .left article div sub {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.topNav .right {
+  display: flex;
+  gap: 1rem;
+}
+
+.topNav .right a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.topNav .right a p {
+  display: flex;
+  flex-direction: column;
+}
+
+.topNav .right a svg {
+  color: black;
+}
+
+.topNav .right a p span {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.topNav .right a p small {
+  font-size: 0.7rem;
+}
+
+.headNav {
+  background: #322e7ff4;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headNav nav {
+  gap: 1rem;
+  display: flex;
+  padding: 0 10px;
+}
+
+.headNav nav a {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.headNav legend {
+  padding: 10px;
+  background: var(--secondary);
+  color: black;
+}
+
+.headToggle {
+  display: none;
+}
+
+.headCon {
+  display: grid;
+  width: 100%;
+  padding: 8vh 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.headSwiper {
+  width: 350px;
+  height: 280px;
+}
+
+
+.headSwiper img {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+}
+
+.headCon article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headCon article h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.headCon nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.headCon nav a {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px;
+  cursor: pointer;
+  color: black;
+  border: 1px solid var(--secondary);
+}
+
+.headCon nav a:first-child {
+  background: var(--secondary);
+  color: white;
+}
+
+
+
+.levelBox {
+  background: var(--secondary);
+  display: grid;
+  /* grid-template-columns: 4fr 6fr; */
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 80%;
+  padding: 5vh 10%;
+  align-items: center;
+  background: rgb(39, 26, 26);
+  background: #322e7ff4;
+}
+
+.levelBox article strong {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.levelBox article p {
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+}
+
+.levelBox article p svg {
+  font-size: 4rem;
+  color: white;
+  color: var(--secondary);
+}
+
+.levelBox article p sub {
+  color: white;
+}
+
+.levelBox article p span {
+  color: var(--secondary);
+}
+
+
+.levelBox .right {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  border-left: 2px solid white;
+}
+
+.levelBox .right p {
+  align-items: center;
+}
+
+
+.aboutBox{
+  min-height: 350px;
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.aboutBox .left{
+  position: relative;
+}
+.aboutBox .left img{
+  object-fit: cover;
+}
+
+.aboutBox .right{
+  padding: calc(20px + 2rem) 20px;
+}
+
+.serviceBox{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.services{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* .service{
+  border: 1px solid var(--secondary);
+}
+.service .imgBox{
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.service .imgBox img{
+  object-fit: cover;
+}
+.service article{
+  padding: 10px;
+}
+.service small{
+  color: rgb(93, 93, 93) !important;
+} 
+.service article {
+  padding: 10px;
+}
+
+.service small {
+  color: rgb(93, 93, 93) !important;
+} 
+*/
+
+.service {
+  padding: 20px;
+  border: 1px solid var(--secondary);
+  align-items: center;
+  text-align: center;
+}
+
+.service svg{
+  font-size: 2rem;
+  color: black;
+}
+.service strong{
+  font-size: 1rem;
+}
+.service small{
+  color: black;
+}
+
+.clientBox{
+  background: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.clients{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.client{
+  padding: 3px 5px;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  border-radius: 40px;
+  background: #322e7ff4;
+  color: white;
+}
+
+.clientBox, .serviceBox,.projectBox{
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.projectBox .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectBox .top a{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: rgb(95, 95, 95);
+}
+
+
+
+@media all and (max-width:1400px) {
+  .levelBox{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .levelBox > *{
+    margin: auto;
+  }
+  .levelBox .left{
+    text-align: center;
+  }
+  .levelBox .right{
+    border: none;
+  }
+
+  .serviceBox, .clientBox {
+    align-items: center;
+  }
+
+  .services, .clients {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    width: 250px;
+  }
+
+  .service img {
+    width: 100%;
+  }
+}
+
+@media all and (max-width:1000px) {
+  .headBox {
+    width: 90%;
+    padding: 15px 5% 5vh 5%;
+  }
+
+  .headNav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 170px;
+    padding: 25px;
+    left: -220px;
+    gap: 0.5rem;
+    z-index: 1000;
+    transition: 0.4s ease;
+  }
+
+  .headNav.change {
+    left: 0;
+  }
+
+  .headToggle {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.4s ease;
+    left: 0;
+  }
+
+  .headToggle.change {
+    left: 200px;
+  }
+
+  .headNav nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  .aboutBox{
+    grid-template-columns: 1fr;
+  }
+  .aboutBox .left{
+    height: 250px;
+  }
+}
+
+@media all and (max-width:850px) {
+  .topNav {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headBox {
+    gap: 2rem;
+  }
+
+  .headCon {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
+  .headCon article {
+    align-items: center;
+    text-align: center
+  }
+
+  .levelBox {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (max-width : 500px){
+  .levelBox .right{
+    gap: 0.5rem;
+    padding: 0;
+    flex-direction: column;
+  }
+  .levelBox .right svg{
+    font-size: 1.5rem;
+  }
+}
+@media all and (max-width : 450px){
+  .headCon{
+    padding: 2vh;
+  }
+  .headCon article h1{
+    font-size: 1.5rem;
+  }
+  .aboutBox{
+    width: 100%;
+  }
+  .topNav .left{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .topNav .left article{
+    align-items: center;
+  }
+  .topNav .left article div {
+    justify-content: space-around;
+  }
+}
+@media all and (max-width : 400px) {
+  .headCon .right{
+    width: 100%;
+  }
+  .headSwiper {
+    width: 240px;
+  }
+}
