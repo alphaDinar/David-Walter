@@ -1,0 +1,170 @@
+.headBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.topNav {
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.topNav .left {
+  display: flex;
+  gap: 1rem;
+}
+
+.topNav .logoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+}
+
+.topNav .logoBox h1 {
+  background: var(--theme);
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  justify-content: center;
+  color: #F03835;
+}
+
+.topNav .left p {
+  font-size: 1.5rem;
+}
+
+.topNav .left article small {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.topNav .left article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.topNav .left article div {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.topNav .left article div sub {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.topNav .right {
+  display: flex;
+  gap: 1rem;
+}
+
+.topNav .right a {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.topNav .right a p {
+  display: flex;
+  flex-direction: column;
+}
+
+.topNav .right a svg {
+  color: black;
+}
+
+.topNav .right a p span {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.topNav .right a p small {
+  font-size: 0.7rem;
+}
+
+@media all and (max-width:1000px) {
+  /* .headBox {
+    width: 90%;
+    padding: 15px 5% 5vh 5%;
+  } */
+
+  .headNav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 170px;
+    padding: 25px;
+    left: -220px;
+    gap: 0.5rem;
+    z-index: 1000;
+    transition: 0.4s ease;
+  }
+
+  .headNav.change {
+    left: 0;
+  }
+
+  .headToggle {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.4s ease;
+    left: 0;
+  }
+
+  .headToggle.change {
+    left: 200px;
+  }
+
+  .headNav nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width:850px) {
+  .topNav {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media all and (max-width:450px) {
+  .topNav .left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .topNav .left article {
+    align-items: center;
+  }
+
+  .topNav .left article div {
+    justify-content: space-around;
+  }
+}

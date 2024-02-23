@@ -1,4 +1,4 @@
-import { MdArrowForward,MdLocationPin, MdMail,MdOutlineMoreTime, MdOutlineSupportAgent, MdPhone } from 'react-icons/md';
+import { MdArrowForward, MdLocationPin, MdMail, MdOutlineMoreTime, MdOutlineSupportAgent, MdPhone } from 'react-icons/md';
 import styles from './home.module.css';
 import Link from 'next/link';
 import { VscDebugBreakpointDataUnverified } from 'react-icons/vsc';
@@ -10,8 +10,14 @@ import { RiVerifiedBadgeLine } from 'react-icons/ri';
 import { clients, services } from '@/External/lists';
 import aboutImage from '../../public/about.jpg';
 import TopNav from './components/TopNav/TopNav';
-// import TopNav from '@/components/TopNav/topNav';
-// import projectImage
+import mapImage from '../../public/mapHigh.gif';
+import TestimonialSwiper from './home/TestimonialSwiper';
+import Footer from './components/Footer/Footer';
+import ClientSet from './home/ClientSet';
+import ProjectBox from './home/ProjectBox';
+import BlogBox from './home/BlogBox';
+import { FcTimeline } from 'react-icons/fc';
+import { FaTimeline } from 'react-icons/fa6';
 
 const Home = () => {
   const point = <VscDebugBreakpointDataUnverified />;
@@ -68,7 +74,7 @@ const Home = () => {
           </section>
         </section>
 
-        <TopNav/>
+        <TopNav />
 
         <section className={styles.headCon}>
           <article>
@@ -96,7 +102,7 @@ const Home = () => {
       <section className={styles.levelBox}>
         <article className={styles.left}>
           <p>
-            <strong>49 Years</strong>
+            <strong><span className='int' style={{ color: 'white' }}>49</span> Years</strong>
             <sub>Of Undefeated Success</sub>
           </p>
         </article>
@@ -130,12 +136,12 @@ const Home = () => {
 
       <section className={styles.serviceBox} id='box'>
         <header>
-          <small><sub></sub> Our Services</small>
           <h3>Our Services</h3>
+          <sub></sub>
         </header>
 
         <section className={styles.services}>
-          {services.map((el,i) => (
+          {services.map((el, i) => (
             <div key={i} className={styles.service}>
 
               {el.iconEl}
@@ -151,52 +157,53 @@ const Home = () => {
 
       <section className={styles.clientBox} id='box'>
         <header>
-          <small><sub></sub> Our Clients</small>
           <h3>Our Clients</h3>
+          <sub></sub>
         </header>
 
-        <section className={styles.clients}>
-          {clients.map((el,i) => (
-            // el.img &&
-            <div key={i} className={styles.client}>
-              {point}
-              <span>{el.tag}</span>
-              {point}
-            </div>
-          ))}
-        </section>
+        <ClientSet />
       </section>
 
+      <ProjectBox />
 
-      <section className={styles.projectBox} id='box'>
-        <section className={styles.top}>
+      <section className={styles.testimonialBox} id='box'>
+        <Image src={mapImage} alt='' sizes='1' fill />
+        <section className={styles.sheet}></section>
+        <section className='con'>
           <header>
-            <small><sub></sub> Recent Projects</small>
-            <h3>Recent Projects</h3>
+            <h3>Testimonials</h3>
+            <sub></sub>
           </header>
-
-          <Link href={'/projects'}><MdArrowForward/> More</Link>
+          <TestimonialSwiper />
         </section>
-
-
-        {/* <section>
-          {[0, 0, 0, 0].map((el) => (
-            <div className={styles.project}>
-
-            </div>
-          ))}
-        </section> */}
       </section>
 
+      <BlogBox />
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.039531574266!2d-0.2127994259245494!3d5.561159433599683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf90a0ad388495%3A0x3637a94eff4ed377!2sDavid%20Walter%20Ghana%20Limited!5e0!3m2!1sen!2sgh!4v1708681404756!5m2!1sen!2sgh"
+        width="100%" height="350"
+        loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
 
-      {/* <span>Recent Projects</span>
-          <span>Blog</span>
-          <span>Testimonial</span>
-          <span>Timeline preview link to actual page</span>
-          <span>Map</span>
-          <span>contact</span>
-          <span>foot</span> */}
+      <section className={styles.quoteBox}>
+        <article>
+          <p>
+            <strong>Make an Enquiry or Call : </strong> <Link href={'/call'} className='int'>+233(0)302-224-517</Link>
+          </p>
+          <span>Contact us today.</span>
+        </article>
+
+        <legend>
+          Fill Enquiry Form
+        </legend>
+      </section>
+
+      <Link href={'/timeline'} className={styles.timelineTab}>
+        <FaTimeline />
+        <span>Our Timeline</span>
+      </Link>
+
+      <Footer />
 
 
     </main>

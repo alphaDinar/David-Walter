@@ -1,0 +1,175 @@
+.con {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.con header {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.con header strong {
+  font-size: 1.5rem;
+}
+
+.timeBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  position: relative;
+}
+.statusBox{
+  position:fixed;
+  bottom: 20px;
+  right: 20px;
+  background: whitesmoke;
+  padding: 10px;
+  border-radius: 100px;
+  background: #EBEBEB;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  z-index: 100;
+}
+.statusBox strong{
+  font-size: 1.2rem;
+}
+.statusBox small{
+  font-size: 1rem;
+}
+
+.timeBox section {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  margin: 0 auto;
+}
+
+.timeBox section img {
+  border-radius: 10px;
+}
+
+.timeBox .right {
+  margin-top: 200px;
+}
+
+.event {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.event article {
+  background: white;
+  border-radius: 0 0 10px 10px;
+  padding: 0;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.event sub {
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.263);
+  transition: 0.3s ease;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event .imgBox {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.event:hover sub {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* scale: 80; */
+}
+
+.event sub svg {
+  transition: 0.3s ease;
+  color: wheat;
+}
+
+.event:hover sub svg {
+  font-size: 2rem;
+}
+
+.timer {
+  margin: 0 auto;
+  width: 20px;
+  background: skyblue;
+  /* position: relative; */
+  border-radius: 100px;
+}
+
+.timer .tracker {
+  width: 20px;
+  background: var(--pass);
+  position: relative;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 100px 100px 0 0;
+}
+
+.timer .tracker legend {
+  bottom: -30px;
+  width: 100%;
+  height: 30px;
+  border-radius: 100px;
+  position: absolute;
+  border-radius: 0 0 100px 100px;
+  background: var(--theme);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: wheat;
+}
+
+@media all and (max-width:750px) {
+  .event .imgBox {
+    position: relative;
+    width: 100%;
+    height: 130px;
+  }
+  .timeBox section{
+    margin: revert;
+    gap: 70px;
+  }
+  .timeBox .right {
+    margin-top: 130px;
+  }
+}
+@media all and (max-width:750px) {
+  .event .imgBox{
+    height: 80px;
+  }
+  .timeBox .right {
+    margin-top: 80px;
+  }
+  .statusBox{
+    display: none;
+  }
+}

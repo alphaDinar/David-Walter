@@ -2,6 +2,7 @@
 import { MdMenu } from 'react-icons/md';
 import styles from '../../home.module.css';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const TopNav = () => {
   const [menuToggled, setMenuToggled] = useState(false);
@@ -17,19 +18,21 @@ const TopNav = () => {
     <section onClick={toggleMenu} className={menuToggled ? `${styles.headNav} ${styles.change}` : styles.headNav}>
       <MdMenu onClick={toggleMenu} className={styles.headToggle} />
       <nav>
-        <a href="">Home </a>
-        <a href="">About </a>
-        <a href="">Services </a>
-        <a href="">Projects </a>
-        <a href="">Team </a>
-        <a href="">Blog </a>
-        <a href="">FAQ</a>
-        <a href="">Contact </a>
+        <Link href={"/"}>Home </Link>
+        <Link href="">About </Link>
+        <Link href="">Services </Link>
+        <Link href="">Projects </Link>
+        <Link href="">Team </Link>
+        <Link href="">Blog </Link>
+        <Link href="">FAQ</Link>
+        <Link href="">Contact </Link>
       </nav>
 
-      <legend>
-        Company
-      </legend>
+      <Link href={'/timeline'}>
+        <legend>
+          Timeline
+        </legend>
+      </Link>
     </section>
   )
 }

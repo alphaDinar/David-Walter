@@ -21,10 +21,16 @@
   font-family: 'Raleway', sans-serif;
 }
 
-h1{
-  font-family: 'Bebas Neue', cursive;  
+h1 {
+  font-weight: 400;
+  font-family: 'Bebas Neue', cursive;
 }
-body{
+
+.int {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
   background: ghostwhite;
 }
 
@@ -35,18 +41,21 @@ body{
   scroll-behavior: smooth;
 }
 
-:root{
-  --secondary : #EFB51C;
-  --secondary : #dba612;
+:root {
+  --theme: #322e7ff4;
+  --secondary: #EFB51C;
+  --secondary: #dba612;
+  --pass : #1fb76b;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
 }
 
 
-body::-webkit-scrollbar ,div::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
 section::-webkit-scrollbar {
   background: darkgray;
   cursor: pointer;
@@ -54,8 +63,10 @@ section::-webkit-scrollbar {
   width: 10px;
 }
 
+body::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb,
 section::-webkit-scrollbar-thumb {
-  background: white;
+  background: var(--theme);
   border-radius: 100px;
 }
 
@@ -74,18 +85,74 @@ small sub {
   background: var(--secondary);
 }
 
-#box{
 
+
+#box,
+#box .con,
+#boxPage {
   width: 80%;
   padding-left: 10%;
   padding-right: 10%;
-  /* padding: 0 10%; */
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#boxPage{
+  padding-top: 15px;
 }
 
-@media all and (max-width : 450px){
-  #box{
+#box .con {
+  z-index: 10;
+}
+
+#box header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+  width: 100%;
+}
+
+#box header h3 {
+  font-size: 1.5rem;
+}
+
+#box header a {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: rgb(95, 95, 95);
+}
+
+#box header sub {
+  width: 100px;
+  height: 2px;
+  display: block;
+  background: var(--secondary);
+}
+
+
+
+@media all and (max-width : 1300px) {
+
+  #box,
+  #boxPage {
     width: 90%;
     padding-right: 5%;
     padding-left: 5%;
+  }
+
+  #box .con {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
